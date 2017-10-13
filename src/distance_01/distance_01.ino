@@ -23,32 +23,32 @@ void loop() {
 	blinkLed(distance);
 } 
 
-int blinkLed(long time)
+int blinkLed(long dist)
 {
-	if(time < 6)
+	if(dist < 6)
 	{
 		digitalWrite(led, LOW);
 		return 0;
 	}
-	if(time < 12)
+	if(dist < 12)
 	{
 		digitalWrite(led, LOW);
-		delay(time);
+		delay(dist);
 		digitalWrite(led, HIGH);
-		delay(time);
+		delay(dist);
 		return 0;
 	}
-	if(time < 50)
+	if(dist < 50)
 	{	
 		digitalWrite(led, HIGH);
-  	delay(time * 5);
+  	delay(dist * 5);
   	digitalWrite(led, LOW);
-  	delay(time * 5);
+  	delay(dist * 5);
   	return 0;
 	}
 	digitalWrite(led, HIGH);
-  delay(time * 6);
+  delay(dist * 6);
   digitalWrite(led, LOW);
-  delay(time * 6);
+  delay(dist * 6);
   return 0;
 }
