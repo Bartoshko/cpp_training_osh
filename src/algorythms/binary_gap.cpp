@@ -1,1 +1,0 @@
-// calculate binnary gap of given number

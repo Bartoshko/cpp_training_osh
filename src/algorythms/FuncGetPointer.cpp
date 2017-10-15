@@ -1,6 +1,5 @@
 #include <iostream>
 using namespace std;
- 
 
 double getAverage(int *arr, int size);
  
