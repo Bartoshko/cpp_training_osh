@@ -6,7 +6,7 @@
 
 using namespace std;
 
-int arr1[5] = {2,5,3,4,1}, arr2[4] = {5,1,2,3}, arr3[4]={3,2,3,1};
+int arr1[] = {2,11,5,3,4,1,6,7,8, 9, 10 }, arr2[4] = {5,1,2,3}, arr3[4]={3,2,3,1};
 int solution(vector<int> &A);
 
 int main()
@@ -18,7 +18,7 @@ int main()
 	vector<int> A;
 	string text;
 	
-	cout << "Chouse array: " << endl;
+	cout << "number please: " << endl;
 	cin >> number;
 	switch(number)
 	{
@@ -48,13 +48,20 @@ int main()
 int solution(vector<int> &A)
 {
 	set<int> S;
-	set<int>::iterator it = S.begin();
+	
 	for (int i = 0; i < A.size(); i++)
 	{
 		S.insert(A[i]);
+		cout << "Inserting to set "<< A[i] << endl;
 	}
-	advance(it, S.size());
-	if(S.size() == A.size() && S.size() == *it)
+	set<int>::iterator it = S.begin();
+	auto b = S.begin();
+	for (int z = 0; z < S.size(); z++)
+	{
+		cout << *it << " iterations" << endl;
+		advance(it, 1);
+	}
+	if(S.size() == A.size() && S.size() == *(--S.end()))
 	{
 		return 1;
 	}
