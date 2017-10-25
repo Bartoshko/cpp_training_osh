@@ -52,13 +52,12 @@ int solution(vector<int> &A)
 	for (int i = 0; i < A.size(); i++)
 	{
 		S.insert(A[i]);
-		cout << "Inserting to set "<< A[i] << endl;
+		cout << "Inserting to set: "<< A[i] << endl;
 	}
 	set<int>::iterator it = S.begin();
-	auto b = S.begin();
 	for (int z = 0; z < S.size(); z++)
 	{
-		cout << *it << " iterations" << endl;
+		cout << z << " number stored in set is: " << *it << endl;
 		advance(it, 1);
 	}
 	if(S.size() == A.size() && S.size() == *(--S.end()))
